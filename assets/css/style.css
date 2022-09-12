@@ -1,4 +1,17 @@
 /*Custom*/
+.video-bg {
+	width: 40%;
+	height: 40%;
+	display: block;
+	margin: 0 auto;
+}
+  @media (min-width: 768px) {
+    .video-bg {
+		min-width: 80%;
+		min-height: 80%;
+	  } 
+}
+
 .container-info {
   display: inline-block;
   position: relative;
