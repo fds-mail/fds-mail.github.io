@@ -12,6 +12,27 @@
   }
 }
 
+/* Youtube Embed*/
+
+iframe {
+   display: block;
+   margin: 0 auto;
+}
+
+.youtube {
+	width: 90%;
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 1170px) {
+  .youtube {
+	width: 560px;
+	height: 315px;
+    margin-bottom: 30px;
+  }
+}
+
 /*Footer Custom*/
 .container-info {
   display: inline-block;
