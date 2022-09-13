@@ -1,7 +1,7 @@
 /*Custom*/
 .video-bg {
-	width: 55%;
-	height: 55%;
+	width: 100%;
+	height: 100%;
 	display: block;
 	margin: 0 auto;
 }
@@ -75,7 +75,7 @@
 
 /*Button*/
 
-.btn {
+.butang {
     padding: 12px 25px;
     font-size: 14px;
     font-weight: 600;
@@ -88,22 +88,15 @@
     transition: ease-out 0.3s;
     -webkit-transition: ease-out 0.3s;
     -moz-transition: ease-out 0.3s;
-	margin-bottom: 10px;
-    margin-left: 45%;
-    margin-right: 45%;
 }
 
-.btn:hover {
+.butang:hover {
     color: #4E98E2;
     background: transparent;
     box-shadow: inset 0 0 0 0 #4E98E2;
     border-color: #4E98E2;
 }
 
-.btn-color-fix {
-    margin-top: 15px;
-    border-color: #4E98E2;
-}
 
 /*Timeline*/
 
