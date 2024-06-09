@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FDS</title>
+
+    <!-- Favicons -->
+    <link
+      href="https://cdn.discordapp.com/attachments/1056278573113159742/1120722049984376853/favicon.png"
+      rel="icon"
+    />
+    <link
+      href="https://cdn.discordapp.com/attachments/1056278573113159742/1120722049711755384/apple-touch-icon.png"
+      rel="apple-touch-icon"
+    />
+
+    <!-- CSS -->
+    <link href="styles.css" rel="stylesheet" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "hover-blue": "#4e98e2",
+            },
+          },
+          fontFamily: {
+            vt323: ["VT323", "monospace"],
+            bungee: ["Bungee", "display"],
+            abel: ["Abel", "sans-serif"],
+            bayon: ["Bayon", "sans-serif"],
+          },
+        },
+      };
+    </script>
+
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.bunny.net" />
+    <link
+      href="https://fonts.bunny.net/css?family=abel:400|bayon:400|bungee:400|vt323:400"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="flex h-screen bg-div text-white">
+      <!-- Sidebar -->
+      <!-- Large Sidebar Start -->
+      <div class="w-20 bg-gray-800 hide">
+        <div
+          class="flex items-center justify-center h-20 border-b border-gray-700"
+        >
+          <img
+            class="w-12 h-12"
+            src="https://1drv.ms/i/c/40cdede54f687ae1/IQOmLX3AyGTTTpDxK_9dwHGqAQ8Wx9j38gAqIbhtq9iWNZ4?width=2000&height=2000"
+            alt="Logo"
+          />
+        </div>
+        <div class="flex flex-col mt-6">
+          <a
+            href="index.html"
+            class="flex items-center justify-center h-20 hover:bg-gray-700"
+          >
+            <span class="w-8 h-8 material-symbols-outlined"> home </span>
+          </a>
+          <a
+            href="about.html"
+            class="flex items-center justify-center h-20 hover:bg-gray-700"
+          >
+            <span class="w-8 h-8 material-symbols-outlined">
+              account_circle
+            </span>
+          </a>
+          <a
+            href="portfolio.html"
+            class="flex items-center justify-center h-20 hover:bg-gray-700"
+          >
+            <span class="w-8 h-8 material-symbols-outlined"> dataset </span>
+          </a>
+          <a
+            href="index.html#contact"
+            class="flex items-center justify-center h-20 hover:bg-gray-700"
+          >
+            <span class="w-8 h-8 material-symbols-outlined"> contacts </span>
+          </a>
+        </div>
+      </div>
+      <!-- Large Sidebar End -->
+
+      <!-- Small Sidebar Start -->
+      <div
+        class="bg-gray-800 fixed bottom-0 w-full flex justify-between items-center py-4 px-4 sm:hidden z-50"
+      >
+        <div
+          class="flex items-center justify-center h-20 border-r border-gray-700 pr-5 pl-5"
+        >
+          <img
+            class="w-12 h-12"
+            src="https://1drv.ms/i/c/40cdede54f687ae1/IQOmLX3AyGTTTpDxK_9dwHGqAQ8Wx9j38gAqIbhtq9iWNZ4?width=2000&height=2000"
+            alt="Logo"
+          />
+        </div>
+        <a href="index.html" class="hover:bg-gray-700">
+          <span class="w-6 h-6 material-symbols-outlined">home</span>
+        </a>
+        <a href="about.html" class="hover:bg-gray-700">
+          <span class="w-6 h-6 material-symbols-outlined">account_circle</span>
+        </a>
+        <a href="portfolio.html" class="hover:bg-gray-700">
+          <span class="w-6 h-6 material-symbols-outlined">dataset</span>
+        </a>
+        <a href="index.html#contact" class="hover:bg-gray-700">
+          <span class="w-6 h-6 material-symbols-outlined">contacts</span>
+        </a>
+      </div>
+      <!-- Small Sidebar End -->
+
+      <!-- Main Content -->
+      <div class="flex-1 overflow-y-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-10 pb-10 px-10">
+          <!-- Noah & The Great Flood (AQ WISE SDN. BHD) Start -->
+          <div
+            class="rounded-lg bg-gradient-to-br from-violet-800 to-blue-900 p-8"
+          >
+            <h2 class="mb-4 text-2xl">
+              Noah & The Great Flood
+              <a target="_blank" href="https://aqwise.my/"
+                >(AQ WISE SDN. BHD)</a
+              >
+            </h2>
+            <div
+              style="
+                position: relative;
+                padding-bottom: 56.25%;
+                height: 0;
+                overflow: hidden;
+              "
+            >
+              <iframe
+                style="
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                "
+                src="https://www.youtube.com/embed/0vWLilAdizs"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="mt-4">
+              <p><strong>Date :</strong><br />2021</p>
+            </div>
+            <div class="mt-4">
+              <p>
+                <strong>Project roles :</strong><br />Animator, Editor,
+                Compositor, Storyboarding, Concept Designer, Sound Designer
+              </p>
+            </div>
+            <div class="mt-4">
+              <p>
+                <strong>Producer/Storyteller :</strong><br />
+                <a target="_blank" href="https://solehahyaacob.com/"
+                  ><em>Professor Dr. Solehah Binti Hj. Yaacob</em></a
+                >
+              </p>
+            </div>
+            <div class="mt-4">
+              <p>
+                <strong>References:</strong><br /><a
+                  target="_blank"
+                  href="https://solehahyaacob.com/"
+                  ><em>Professor Dr. Solehah Binti Hj. Yaacob</em></a
+                >
+                &
+                <a target="_blank" href="https://aqwise.my/revolusi-book/"
+                  ><em>Revolusi Bahasa Dan Asas Tamadun's Book</em></a
+                >
+              </p>
+            </div>
+            <div class="mt-4">
+              <p>
+                <strong>Project description:</strong><br />Prophet Noah lived
+                with his people for 950 years. However, it turned out that the
+                people of Prophet Noah were full of disbelief until finally they
+                were overcome by trials in the form of a great flood.
+              </p>
+            </div>
+          </div>
+          <!-- Noah & The Great Flood (AQ WISE SDN. BHD) End -->
+          <!-- Last Call (AQ WISE SDN. BHD) Start -->
+          <div
+            class="rounded-lg bg-gradient-to-br from-violet-800 to-blue-900 p-8"
+          >
+            <h2 class="mb-4 text-2xl">
+              Last Call
+              <a target="_blank" href="https://aqwise.my/"
+                >(AQ WISE SDN. BHD)</a
+              >
+            </h2>
+            <div
+              style="
+                position: relative;
+                padding-bottom: 56.25%;
+                height: 0;
+                overflow: hidden;
+              "
+            >
+              <iframe
+                style="
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                "
+                src="https://www.youtube.com/embed/RxEDT4r0o2w"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="mt-4">
+              <p><strong>Date :</strong><br />2021</p>
+            </div>
+            <div class="mt-4">
+              <p>
+                <strong>Project roles :</strong><br />Director, Editor, 3D
+                Modeling, Storyboarding, Sound Designer
+              </p>
+            </div>
+            <div class="mt-4">
+              <p>
+                <strong>Project description:</strong><br />Azmi who came across
+                a mysterious phone booth began to uncover old memories.
+              </p>
+            </div>
+          </div>
+          <!-- Last Call (AQ WISE SDN. BHD) End -->
+          <!-- Little Fisher Start -->
+          <div
+            class="rounded-lg bg-gradient-to-br from-violet-800 to-blue-900 p-8"
+          >
+            <h2 class="mb-4 text-2xl">Little Fisher</h2>
+            <div
+              style="
+                position: relative;
+                padding-bottom: 56.25%;
+                height: 0;
+                overflow: hidden;
+              "
+            >
+              <iframe
+                style="
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                "
+                src="https://www.youtube.com/embed/1djRt3Y_5sY"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="mt-4">
+              <p><strong>Date :</strong><br />2022</p>
+            </div>
+            <div class="mt-4">
+              <p>
+                <strong>Project roles :</strong><br />Director, Animator,
+                Editor, Compositor, Storyboarding, Sound Designer
+              </p>
+            </div>
+            <div class="mt-4">
+              <p>
+                <strong>Project members :</strong><br />
+                Firdaus, Haikal, Sabrina
+              </p>
+            </div>
+            <div class="mt-4">
+              <p>
+                <strong>Project description:</strong><br />A Fishercat, Mellow
+                start his days usually by fishing to make a living. Mellow
+                fished calmly on his boat until it came out of the strip usually
+                in a dirty, polluted, and stormy place.
+              </p>
+            </div>
+          </div>
+          <!-- Little Fisher End -->
+          <!-- Kutukan Kelerai Start -->
+          <div
+            class="rounded-lg bg-gradient-to-br from-violet-800 to-blue-900 p-8"
+          >
+            <h2 class="mb-4 text-2xl">Kutukan Kelerai</h2>
+            <div
+              style="
+                position: relative;
+                padding-bottom: 56.25%;
+                height: 0;
+                overflow: hidden;
+              "
+            >
+              <iframe
+                style="
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                "
+                src="https://www.youtube.com/embed/UF3Sm6lQ_Rc"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="mt-4">
+              <p><strong>Date :</strong><br />2021</p>
+            </div>
+            <div class="mt-4">
+              <p>
+                <strong>Project roles :</strong><br />Director, Editor,
+                Compositor, Storyboarding, Sound Designer
+              </p>
+            </div>
+            <div class="mt-4">
+              <p>
+                <strong>Project members :</strong><br />
+                Firdaus, Iqbal
+              </p>
+            </div>
+            <div class="mt-4">
+              <p>
+                <strong>Project description:</strong><br />Zakaria & Mia went to
+                his grandfather's house to help him clean up the store room.
+                While they were packing, they heard the sound of something lying
+                at the end of the store room. They found a large box behind a
+                pile of store goods. They tried to see the contents of the chest
+                by using the store key given by his grandfather. Suddenly, a bad
+                rattling mat came out of the crate and flew out of the room.
+              </p>
+            </div>
+          </div>
+          <!-- Kutukan Kelerai End -->
+          <!-- Heart Attack Start -->
+          <div
+            class="rounded-lg bg-gradient-to-br from-violet-800 to-blue-900 p-8"
+          >
+            <h2 class="mb-4 text-2xl">Heart Attack</h2>
+            <div
+              style="
+                position: relative;
+                padding-bottom: 56.25%;
+                height: 0;
+                overflow: hidden;
+              "
+            >
+              <iframe
+                style="
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                "
+                src="https://www.youtube.com/embed/-us7GR_gpVQ"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="mt-4">
+              <p><strong>Date :</strong><br />2022</p>
+            </div>
+          </div>
+          <!-- Kutukan Kelerai End -->
+          <!-- GMJB Majlis Khatam & Bubur Lambuk Start -->
+          <div
+            class="rounded-lg bg-gradient-to-br from-violet-800 to-blue-900 p-8"
+          >
+            <h2 class="mb-4 text-2xl">
+              Majlis Khatam Al Quran & Memasak Bubur Lambuk 2023 (GIATMARA JB)
+            </h2>
+            <div
+              style="
+                position: relative;
+                padding-bottom: 56.25%;
+                height: 0;
+                overflow: hidden;
+              "
+            >
+              <iframe
+                style="
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                "
+                src="https://www.youtube.com/embed/HBcDDjwhh8M"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="mt-4">
+              <p><strong>Date :</strong><br />2023</p>
+            </div>
+          </div>
+          <!--  GMJB Majlis Khatam & Bubur Lambuk End -->
+        </div>
+        <!-- Gallery Start -->
+        <div class="grid grid-cols-1 gap-8 lg:pb-10 pb-32 px-10" id="Gallery">
+          <div
+            class="relative rounded-lg bg-gradient-to-br from-violet-800 to-blue-900 p-8"
+          >
+            <h2 class="mb-4 text-2xl">Gallery</h2>
+            <div class="mx-auto p-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <!-- Image 1 -->
+                <div>
+                  <a
+                    href="https://1drv.ms/i/c/40cdede54f687ae1/IQM_gVVw7TIuSa9R976YIs1iAZfLgXHrPl1EGywWBKn4sio?width=1024"
+                    data-lightbox="smkkp2"
+                    data-title="Designing & Installing Backdrop for SMK Kota Puteri 2"
+                  >
+                    <img
+                      src="https://1drv.ms/i/c/40cdede54f687ae1/IQM_gVVw7TIuSa9R976YIs1iAZfLgXHrPl1EGywWBKn4sio?width=1024"
+                      alt="smkkp2"
+                      class="w-full h-auto rounded shadow"
+                    />
+                  </a>
+                  <p class="text-center mt-2">
+                    Designing & Installing Backdrop for SMK Kota Puteri 2
+                  </p>
+                </div>
+                <!-- Image 2 -->
+                <div>
+                  <a
+                    href="https://1drv.ms/i/c/40cdede54f687ae1/IQOdqvkXI4c-T6A4svnTBlpCAfRxD9VH6962qhtYeW4w25Q?width=3280&height=1848"
+                    data-lightbox="madrasah"
+                    data-title="Installing wall sticker & 2D foam for Madrasah"
+                  >
+                    <img
+                      src="https://1drv.ms/i/c/40cdede54f687ae1/IQOdqvkXI4c-T6A4svnTBlpCAfRxD9VH6962qhtYeW4w25Q?width=3280&height=1848"
+                      alt="madrasah"
+                      class="w-full h-auto rounded shadow"
+                    />
+                  </a>
+                  <p class="text-center mt-2">
+                    Installing wall sticker & 2D foam for Madrasah
+                  </p>
+                </div>
+                <!-- Image 3 -->
+                <div>
+                  <a
+                    href="https://1drv.ms/i/c/40cdede54f687ae1/IQOsggyzbkUXSqIAhAtNI-sUASG_HEGts2N8PZmX5TsTce0?width=3280&height=1848"
+                    data-lightbox="towing"
+                    data-title="Designing & Installing sticker to towing truck"
+                  >
+                    <img
+                      src="https://1drv.ms/i/c/40cdede54f687ae1/IQOsggyzbkUXSqIAhAtNI-sUASG_HEGts2N8PZmX5TsTce0?width=3280&height=1848"
+                      alt="towing"
+                      class="w-full h-auto rounded shadow"
+                    />
+                  </a>
+                  <p class="text-center mt-2">
+                    Designing & Installing sticker to towing truck
+                  </p>
+                </div>
+                <!-- Image 4 -->
+                <div>
+                  <a
+                    href="https://1drv.ms/i/c/40cdede54f687ae1/IQMTshn0xs3qS4GP4wJ18ArJAZdAT2qTEy7iG2Z1Y3XvjYQ?width=2252&height=4000"
+                    data-lightbox="towing"
+                    data-title="Designing & Installing sticker to towing truck"
+                  >
+                    <img
+                      src="https://1drv.ms/i/c/40cdede54f687ae1/IQMTshn0xs3qS4GP4wJ18ArJAZdAT2qTEy7iG2Z1Y3XvjYQ?width=2252&height=4000"
+                      alt="towing"
+                      class="w-full h-auto rounded shadow"
+                    />
+                  </a>
+                  <p class="text-center mt-2">
+                    Designing & Installing sticker to towing truck
+                  </p>
+                </div>
+                <!-- Image 5 -->
+                <div>
+                  <a
+                    href="https://1drv.ms/i/c/40cdede54f687ae1/IQN1FpT57lEpS7EqUWQlsd-YATUyFuoUZFua3totMjilstI?width=3280&height=1848"
+                    data-lightbox="skomas"
+                    data-title="Designing & Installing billboard for SMK Kota Masai"
+                  >
+                    <img
+                      src="https://1drv.ms/i/c/40cdede54f687ae1/IQN1FpT57lEpS7EqUWQlsd-YATUyFuoUZFua3totMjilstI?width=3280&height=1848"
+                      alt="skomas"
+                      class="w-full h-auto rounded shadow"
+                    />
+                  </a>
+                  <p class="text-center mt-2">
+                    Designing & Installing billboard for SMK Kota Masai
+                  </p>
+                </div>
+                <!-- Image 6 -->
+                <div>
+                  <a
+                    href="https://1drv.ms/i/c/40cdede54f687ae1/IQPZEL3Znpg4TL_wJFQUFdRgAfa8SZlwy6MEoblWSrEak4o?width=3280&height=1848"
+                    data-lightbox="skomas"
+                    data-title="Designing & Installing billboard for SMK Kota Masai"
+                  >
+                    <img
+                      src="https://1drv.ms/i/c/40cdede54f687ae1/IQPZEL3Znpg4TL_wJFQUFdRgAfa8SZlwy6MEoblWSrEak4o?width=3280&height=1848"
+                      alt="skomas"
+                      class="w-full h-auto rounded shadow"
+                    />
+                  </a>
+                  <p class="text-center mt-2">
+                    Designing & Installing billboard for SMK Kota Masai
+                  </p>
+                </div>
+                <!-- Image 7 -->
+                <div>
+                  <a
+                    href="https://1drv.ms/i/c/40cdede54f687ae1/IQMqE-pvvIM4Qb_DEJwRMbmGAahHSp1dVp9eJWGILYpge54?width=2252&height=4000"
+                    data-lightbox="skomas"
+                    data-title="Designing & Installing zig-zag banner for SMK Kota Masai"
+                  >
+                    <img
+                      src="https://1drv.ms/i/c/40cdede54f687ae1/IQMqE-pvvIM4Qb_DEJwRMbmGAahHSp1dVp9eJWGILYpge54?width=2252&height=4000"
+                      alt="skomas"
+                      class="w-full h-auto rounded shadow"
+                    />
+                  </a>
+                  <p class="text-center mt-2">
+                    Designing & Installing zig-zag banner for SMK Kota Masai
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Gallery End -->
+      </div>
+      <!-- Main Content End -->
+    </div>
+    <script>
+      var swiper = new Swiper(".swiper-container", {
+        slidesPerView: 1,
+        centeredSlides: true,
+        spaceBetween: 30,
+        loop: true, // Enable continuous loop
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          dynamicBullets: true,
+        },
+      });
+
+      swiper.on("click", function () {
+        var activeSlide = swiper.slides[swiper.activeIndex];
+        var activeImage = activeSlide.querySelector("img");
+
+        openLightbox(activeImage.src);
+      });
+
+      function openLightbox(imageSrc) {
+        var lightbox = document.createElement("div");
+        lightbox.classList.add("lightbox");
+
+        var lightboxImage = document.createElement("img");
+        lightboxImage.src = imageSrc;
+
+        lightbox.appendChild(lightboxImage);
+
+        lightbox.addEventListener("click", closeLightbox);
+
+        document.body.appendChild(lightbox);
+      }
+
+      function closeLightbox(event) {
+        if (event.target.classList.contains("lightbox")) {
+          event.target.remove();
+        }
+      }
+    </script>
+  </body>
+</html>
