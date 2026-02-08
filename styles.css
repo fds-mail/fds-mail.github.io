@@ -107,6 +107,88 @@ a:hover {
   margin: 0 auto;
 }
 
+/* Gallery Carousel Styles */
+.gallerySwiper {
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
+
+.gallerySwiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0b152e;
+}
+
+.gallerySwiper .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Thumbnail Carousel */
+.galleryThumbsSwiper {
+  height: 120px;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.galleryThumbsSwiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.galleryThumbsSwiper .swiper-slide-thumb-active {
+  opacity: 1;
+  border-color: #4e98e2;
+}
+
+.galleryThumbsSwiper .swiper-slide img {
+  cursor: pointer;
+}
+
+/* Navigation Buttons */
+.gallerySwiper .swiper-button-next,
+.gallerySwiper .swiper-button-prev {
+  color: #4e98e2;
+}
+
+.gallerySwiper .swiper-button-next:hover,
+.gallerySwiper .swiper-button-prev:hover {
+  color: #ffffff;
+}
+
+/* Pagination */
+.gallerySwiper .swiper-pagination-bullet {
+  background: #4e98e2;
+}
+
+.gallerySwiper .swiper-pagination-bullet-active {
+  background: #ffffff;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .gallerySwiper {
+    height: 300px;
+  }
+
+  .galleryThumbsSwiper {
+    height: 80px;
+  }
+
+  .galleryThumbsSwiper .swiper-slide {
+    width: 20%;
+  }
+}
+
 /* Lightbox */
 .lightbox {
   position: fixed;
@@ -179,4 +261,159 @@ a:hover {
   text-align: center;
   box-shadow: 0 0 0 10px #4e98e2;
   display: block;
+}
+
+/* ====================================
+   ⭐ Y2K STARS BACKGROUND LAYER
+   ==================================== */
+
+/* Stars Container - Background Layer */
+.stars-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Di belakang bg-div */
+  pointer-events: none; /* Tak block clicks */
+  overflow: hidden;
+}
+
+/* Y2K Stars Styling */
+.y2k-star {
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+.y2k-star::before {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  background: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.y2k-star::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    #fff 20%,
+    #fff 80%,
+    transparent 100%
+  );
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+.y2k-star {
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    #fff 20%,
+    #fff 80%,
+    transparent 100%
+  );
+  background-size: 100% 2px;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+/* ====================================
+   🔧 Z-INDEX FIX 
+   ==================================== */
+
+/* Background image layer */
+.bg-div {
+  position: relative;
+  z-index: 1; /* Above stars */
+}
+
+/* Sidebar layer */
+.w-20 {
+  position: sticky;
+  z-index: 10; /* Above background */
+}
+
+/* Mobile bottom navbar (already has z-50 in HTML, just ensure it stays) */
+.bg-gray-800.fixed.bottom-0 {
+  z-index: 50; /* Paling atas */
+}
+
+/* ====================================
+   ✨ ENHANCED GLOW FADE MARQUEE 
+   ==================================== */
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation:
+    marqueeScroll 20s linear infinite,
+    glowFade 2.5s ease-in-out infinite;
+  padding-left: 100%;
+  font-weight: 500; /* Bolder text = better glow */
+  color: #ffffff;
+}
+
+/* Scrolling Animation */
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Enhanced Bright Glow Fade Animation */
+@keyframes glowFade {
+  0%,
+  100% {
+    text-shadow:
+      0 0 10px rgba(78, 152, 226, 0.8),
+      0 0 20px rgba(78, 152, 226, 0.7),
+      0 0 30px rgba(78, 152, 226, 0.6),
+      0 0 40px rgba(78, 152, 226, 0.4);
+    filter: brightness(1);
+  }
+  50% {
+    text-shadow:
+      0 0 15px rgba(78, 152, 226, 1),
+      0 0 30px rgba(78, 152, 226, 1),
+      0 0 45px rgba(78, 152, 226, 0.9),
+      0 0 60px rgba(78, 152, 226, 0.8),
+      0 0 75px rgba(78, 152, 226, 0.6),
+      0 0 90px rgba(78, 152, 226, 0.4);
+    filter: brightness(1.3);
+  }
 }

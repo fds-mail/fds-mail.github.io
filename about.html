@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,11 +7,11 @@
 
     <!-- Favicons -->
     <link
-      href="https://1drv.ms/i/c/40cdede54f687ae1/IQPjIFtyH1b-Q6CCiNF6wwozAXCEyd1cDh-sZMQUZbsRTQM?width=32&height=32"
+      href="https://1drv.ms/u/c/40cdede54f687ae1/IQT2S30zxkOwQp8C5oqHU2EWAexbEynMz9KdGHuo5eVLrak"
       rel="icon"
     />
     <link
-      href="https://1drv.ms/i/c/40cdede54f687ae1/IQNpTf8NZOCLR7ycbevjFm8GAWmagDEReD8mu0L3Gb5hNYM?width=180&height=180"
+      href="https://1drv.ms/u/c/40cdede54f687ae1/IQSD3_mJnY5ITZNVBf1Pgm1OATwELI3t7Brx6KcMThhl73E"
       rel="apple-touch-icon"
     />
 
@@ -78,6 +78,9 @@
 
   <body>
     <div class="flex h-screen bg-div text-white">
+      <!-- ⭐ Stars Container Start -->
+      <div class="stars-container" id="starsContainer"></div>
+      <!-- ⭐ Stars Container End -->
       <!-- Sidebar -->
       <!-- Large Sidebar Start -->
       <div class="w-20 bg-gray-800 hide">
@@ -86,7 +89,7 @@
         >
           <img
             class="w-12 h-12"
-            src="https://1drv.ms/i/c/40cdede54f687ae1/IQOmLX3AyGTTTpDxK_9dwHGqAQ8Wx9j38gAqIbhtq9iWNZ4?width=2000&height=2000"
+            src="https://1drv.ms/u/c/40cdede54f687ae1/IQRlxrmvmQYMSJQwQUvHpkonAUTw7jfPRAGcOjhAUrGBcOs"
             alt="Logo"
           />
         </div>
@@ -130,7 +133,7 @@
         >
           <img
             class="w-12 h-12"
-            src="https://1drv.ms/i/c/40cdede54f687ae1/IQOmLX3AyGTTTpDxK_9dwHGqAQ8Wx9j38gAqIbhtq9iWNZ4?width=2000&height=2000"
+            src="https://1drv.ms/u/c/40cdede54f687ae1/IQRlxrmvmQYMSJQwQUvHpkonAUTw7jfPRAGcOjhAUrGBcOs"
             alt="Logo"
           />
         </div>
@@ -143,7 +146,7 @@
         <a href="portfolio.html" class="hover:bg-gray-700">
           <span class="w-6 h-6 material-symbols-outlined">dataset</span>
         </a>
-        <a href="index.html#contact" class="hover:bg-gray-700">
+        <a href="index.html#contact-sm" class="hover:bg-gray-700">
           <span class="w-6 h-6 material-symbols-outlined">contacts</span>
         </a>
       </div>
@@ -177,9 +180,9 @@
 
                 <br /><br />I pursued further education as a Teknologi Sistem
                 Komputer (Computer System Technology) student at Giatmara Johor
-                Bahru for six months. Alongside my studies, I've freelanced by
+                Bahru for 6 months. Alongside my studies, I've freelanced by
                 doing computer technical support and work as printing operator &
-                graphic designer for Richest Design Legacy SDN BHD over a year.
+                graphic designer for Richest Design Legacy SDN BHD over 3 years.
               </p>
             </div>
           </div>
@@ -210,7 +213,7 @@
                   signboards, banners, x-banners, photocanvas, stickers,
                   apparel, and more.
                 </p>
-                <span class="text-gray-400 text-sm">2023 - 2024</span>
+                <span class="text-gray-400 text-sm">2023 - 2025</span>
               </div>
             </div>
             <!-- Timeline item 1 -->
@@ -378,6 +381,30 @@
           event.target.remove();
         }
       }
+
+      // Generate Y2K Stars
+      (function () {
+        const container = document.getElementById("starsContainer");
+        const stars = [
+          { count: 15, minSize: 15, maxSize: 20 }, // Medium stars
+          { count: 80, minSize: 8, maxSize: 12 }, // Small stars
+        ];
+
+        stars.forEach(({ count, minSize, maxSize }) => {
+          for (let i = 0; i < count; i++) {
+            const star = document.createElement("div");
+            star.className = "y2k-star";
+            star.style.left = Math.random() * 100 + "%";
+            star.style.top = Math.random() * 100 + "%";
+            star.style.setProperty(
+              "--size",
+              Math.random() * (maxSize - minSize) + minSize + "px",
+            );
+            star.style.animationDelay = Math.random() * 3 + "s";
+            container.appendChild(star);
+          }
+        });
+      })();
     </script>
   </body>
 </html>
